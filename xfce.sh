@@ -8,20 +8,6 @@ echo "******* cloning dotfiles for EndeavourOS - XFCE4 Theming *******" && sleep
 echo "******* Getting theme and packages installed now: *******" && sleep 1
     wget -q --timeout=10 https://raw.githubusercontent.com/endeavouros-team/EndeavourOS-packages-lists/master/xfce4
     sudo pacman -S --noconfirm --needed - < xfce4
-
-echo "******* setting up theme for Light-DM: *******" && sleep 1
-    wget -q --timeout=10 https://raw.githubusercontent.com/endeavouros-team/EndeavourOS-ISO/main/airootfs/etc/lightdm/slick-greeter.conf
-    sudo cp  slick-greeter.conf /etc/lightdm/
-    
-echo "******* set lightdm.conf to logind-check-graphical=true ... enable slick greeter to be used *******" && sleep 1
-    cp /etc/lightdm/lightdm.conf ~/endeavouros-xfce4-theming/
-    sed -i 's?#logind-check-graphical=false?logind-check-graphical=true?' lightdm.conf
-    sed -i 's?#greeter-session=example-gtk-gnome?greeter-session=lightdm-slick-greeter?' lightdm.conf
-    sed -i 's?#allow-user-switching=true?allow-user-switching=true?' lightdm.conf
-    sudo cp lightdm.conf /etc/lightdm/lightdm.conf
-
-echo "******* enable lightdm to be used on boot *******" && sleep 1    
-    sudo systemctl -f enable lightdm
       
 echo "******* setting up xfce4 theme and settings: *******" && sleep 1
     rm -rf ~/.config/Thunar ~/.config/qt5ct ~/.config/xfce4 ~/.cache

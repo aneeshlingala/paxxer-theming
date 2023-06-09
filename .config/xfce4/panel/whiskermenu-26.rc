@@ -1,7 +1,7 @@
 favorites=xfce-settings-manager.desktop,xfce4-terminal-emulator.desktop,xfce4-file-manager.desktop,firefox.desktop,org.xfce.Parole.desktop,blueman-manager.desktop,firewall-config.desktop,eos-quickstart.desktop,eos-update-notifier-configure.desktop,eos-apps-info.desktop,eos-log-tool.desktop,reflector-simple.desktop,UpdateInTerminal.desktop,welcome.desktop
 recent=xfce-settings-manager.desktop,reflector-simple.desktop
-button-title=\ EndeavourOS\ \ 
-button-icon=/usr/share/endeavouros/endeavouros-icon.png
+button-title=\ Debian\ \ 
+button-icon=/usr/share/icons/Zafiro-Icons-Dark/apps/scalable/start-here-debian.svg
 button-single-row=false
 show-button-title=true
 show-button-icon=true
@@ -29,7 +29,7 @@ menu-height=476
 menu-opacity=100
 command-settings=xfce4-settings-manager
 show-command-settings=true
-command-lockscreen=xflock4
+command-lockscreen=
 show-command-lockscreen=true
 command-switchuser=dm-tool switch-to-greeter
 show-command-switchuser=false
@@ -80,9 +80,3 @@ name=Open URL
 pattern=^(file|http|https):\\/\\/(.*)$
 command=exo-open \\0
 regex=true
-
-[action5]
-name=EndeavourOS Forum
-pattern=forum
-command=exo-open --launch WebBrowser https://forum.endeavouros.com
-regex=false

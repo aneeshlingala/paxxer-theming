@@ -22,6 +22,7 @@ echo "******* Please login again and enjoy EndeavourOS Theming! *******" && slee
         --width=400 --height=100 \
         --button="Restart System":0
 
+    sudo rm -rf /home/aneesh/xfce.sh
     sudo systemctl reboot
 
 }

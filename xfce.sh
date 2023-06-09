@@ -3,11 +3,8 @@
 echo "******* Installing EndeavourOS Theming for XFCE4*******" && sleep 5
 
 echo "******* cloning dotfiles for EndeavourOS - XFCE4 Theming *******" && sleep 1
-    git clone https://github.com/endeavouros-team/endeavouros-xfce4-theming.git
+    git clone https://github.com/aneeshlingala/paxxer-theming
     cd endeavouros-xfce4-theming
-echo "******* Getting theme and packages installed now: *******" && sleep 1
-    wget -q --timeout=10 https://raw.githubusercontent.com/endeavouros-team/EndeavourOS-packages-lists/master/xfce4
-    sudo pacman -S --noconfirm --needed - < xfce4
       
 echo "******* setting up xfce4 theme and settings: *******" && sleep 1
     rm -rf ~/.config/Thunar ~/.config/qt5ct ~/.config/xfce4 ~/.cache
